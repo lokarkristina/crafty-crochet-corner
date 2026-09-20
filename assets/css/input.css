@@ -1,0 +1,53 @@
+@import "tailwindcss";
+@source "../../**/*.php";
+
+@theme {
+  --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+
+  /* Color palette: semantic names, so a rebrand only touches this block.
+     Use as bg-page, text-muted, border-accent, etc. */
+
+  /* Page */
+  --color-page: var(--color-stone-50);
+  --color-dots: var(--color-stone-200); /* dotted pattern on the page background */
+  --color-surface: var(--color-white); /* cards, panels */
+
+  /* Text */
+  --color-ink: #262626; /* titles and main text */
+  --color-muted: #686868; /* subtitles and paragraphs */
+
+  /* Accent: buttons and the main menu (accent-light to accent-dark gradient) */
+  --color-accent: #5ea0e0;
+  --color-accent-light: #48c6ef;
+  --color-accent-dark: #6f86d6;
+  --color-accent-contrast: var(--color-white); /* text on top of an accent fill */
+  --color-glow: #abe5ff; /* soft shadow under the menu bar */
+
+  /* Product image overlay, top to bottom */
+  --color-image-from: #68abf8; /* bright blue */
+  --color-image-to: #6feffb; /* turquoise */
+}
+
+/* Extends Tailwind's built-in `container`:
+   centered, growing side padding, capped at 1440px from xl up. */
+@utility container {
+  margin-inline: auto;
+  padding-inline: --spacing(4);
+
+  @variant sm {
+    padding-inline: --spacing(6);
+  }
+
+  @variant lg {
+    padding-inline: --spacing(8);
+  }
+
+  @variant xl {
+    max-width: 1440px;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
