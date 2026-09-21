@@ -8,7 +8,7 @@ if (!$product) {
     http_response_code(404);
 }
 
-$title = ($product ? htmlspecialchars($product['title']) : 'Product not found') . ' - Crafty Crochet Corner';
+$title = ($product ? htmlspecialchars($product['title']) : 'Izdelek ni najden') . ' - Crafty Crochet Corner';
 
 ob_start();
 include __DIR__ . '/../templates/product-details.php';

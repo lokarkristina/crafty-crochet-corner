@@ -13,62 +13,68 @@
 return [
     1 => [
         'id' => 1,
-        'image' => 'https://placehold.co/400x400?text=Amigurumi+Bunny',
-        'title' => 'Amigurumi Bunny',
-        'subtitle' => 'A soft handmade plush friend',
+        // Photo: Chay Tessari / Unsplash
+        'image' => 'https://images.unsplash.com/photo-1588016714217-5c5cd4a26d9e?w=800&h=800&fit=crop&q=75',
+        'title' => 'Amigurumi zajček',
+        'subtitle' => 'Mehak ročno izdelan plišast prijatelj',
         'teaser' => [
-            'A soft, handmade crocheted bunny plush with embroidered face details.',
-            'Each bunny is worked stitch by stitch in cuddly cotton yarn and stuffed with hypoallergenic filling.',
-            'Perfect as a gift or nursery decoration.',
+            'Mehak, ročno kvačkan plišasti zajček z vezenimi detajli na obrazu.',
+            'Vsak zajček je izdelan petljo za petljo iz mehke bombažne preje in napolnjen s hipoalergenskim polnilom.',
+            'Popolno darilo ali dekoracija za otroško sobo.',
         ],
         'url' => '/izdelek/1',
     ],
     2 => [
         'id' => 2,
-        'image' => 'https://placehold.co/400x400?text=Chunky+Throw+Blanket',
-        'title' => 'Throw Blanket',
-        'subtitle' => 'Oversized comfort for cold evenings',
+        // Photo: Bogdan Nesterenko / Unsplash
+        'image' => 'https://images.unsplash.com/photo-1693387359607-f48d0a824b1e?w=800&h=800&fit=crop&q=75',
+        'title' => 'Mehka odeja',
+        'subtitle' => 'Velika udobnost za hladne večere',
         'teaser' => [
-            'A cozy, oversized crocheted throw blanket made with chunky merino wool yarn.',
-            'The thick stitches give it a generous weight and a beautiful texture '
-                . 'that looks great draped over a sofa or bed.',
-            'Machine washable, so it is as practical as it is pretty.',
+            'Prijetno, veliko kvačkano pregrinjalo iz debele merino volne.',
+            'Debele petlje mu dajo prijetno težo in čudovito teksturo, '
+                . 'zato je videti odlično prek kavča ali postelje.',
+            'Pralno v pralnem stroju, zato je tako praktično kot lepo.',
         ],
         'url' => '/izdelek/2',
     ],
     3 => [
         'id' => 3,
-        'image' => 'https://placehold.co/400x400?text=Granny+Square+Tote',
-        'title' => 'Granny Square Tote Bag',
-        'subtitle' => 'A classic pattern, made to carry',
+        // Photo: Nicole Sara / Unsplash
+        'image' => 'https://images.unsplash.com/photo-1789495966336-3ebfc4062e32?w=800&h=800&fit=crop&q=75',
+        'title' => 'Granny square torba',
+        'subtitle' => 'Klasičen vzorec, narejen za nošenje',
         'teaser' => [
-            'A colorful crocheted tote bag made of classic granny squares.',
-            'Every square is joined by hand and the bag is lined with cotton fabric, so small items stay put.',
-            'Sturdy handles make it ideal for the market, the beach or a day out.',
-            'No two bags are exactly alike, as the colors are chosen square by square.',
+            'Pisana kvačkana torba iz klasičnih babičinih kvadratkov.',
+            'Vsak kvadratek je ročno spojen, torba pa je podložena z bombažno tkanino, '
+                . 'da majhne stvari ostanejo na mestu.',
+            'Močni ročaji so idealni za tržnico, plažo ali izlet.',
+            'Nobeni dve torbi nista povsem enaki, saj barve izbiramo kvadratek za kvadratkom.',
         ],
         'url' => '/izdelek/3',
     ],
     4 => [
         'id' => 4,
-        'image' => 'https://placehold.co/400x400?text=Flower+Coasters',
-        'title' => 'Flower Coasters (Set of 4)',
-        'subtitle' => 'Protect your table in style',
+        // Photo: Céline Druguet / Unsplash
+        'image' => 'https://images.unsplash.com/photo-1648217736318-fbc4abc138ec?w=800&h=800&fit=crop&q=75',
+        'title' => 'Podstavki s cvetovi (komplet)',
+        'subtitle' => 'Zaščitite mizo s stilom',
         'teaser' => [
-            'A set of four handmade crocheted flower coasters, ideal for protecting tabletops in style.',
-            'Made from durable cotton that soaks up drips and can be washed again and again.',
+            'Komplet štirih ročno kvačkanih podstavkov s cvetovi, idealnih za elegantno zaščito miz.',
+            'Izdelani so iz trpežnega bombaža, ki vpije kapljice in ga lahko perete znova in znova.',
         ],
         'url' => '/izdelek/4',
     ],
     5 => [
         'id' => 5,
-        'image' => 'https://placehold.co/400x400?text=Baby+Booties',
-        'title' => 'Baby Booties',
-        'subtitle' => 'Tiny toes, keep them cozy',
+        // Photo: Rakitha Perera / Unsplash
+        'image' => 'https://images.unsplash.com/photo-1708661758229-fb1e73852b91?w=800&h=800&fit=crop&q=75',
+        'title' => 'Copatki za dojenčke',
+        'subtitle' => 'Majhni prstki naj bodo na toplem',
         'teaser' => [
-            'Adorable crocheted baby booties made with soft, hypoallergenic yarn.',
-            'The gentle stretch keeps them snug without pinching little feet.',
-            'Available in newborn size.',
+            'Ljubki kvačkani copatki za dojenčke iz mehke hipoalergene preje.',
+            'Nežna elastičnost poskrbi za tesen, a ne stiskajoč objem majhnih stopal.',
+            'Na voljo v velikosti za novorojenčke.',
         ],
         'url' => '/izdelek/5',
     ],

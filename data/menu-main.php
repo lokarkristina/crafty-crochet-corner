@@ -1,7 +1,7 @@
 <?php
 
 // Main navigation items, rendered in order by includes/header.php.
-// Pages don't exist yet, so every item links to '#' for now.
+// Pages that don't exist yet link to '#'.
 //
 // Each item takes:
 //   label - required, link text (escaped on output)
@@ -11,7 +11,7 @@
 return [
     [
         'label' => 'Domov',
-        'url' => '#',
+        'url' => '/index.php',
         'icon' => 'fa-solid fa-house',
     ],
     [
@@ -28,7 +28,7 @@ return [
     ],
     [
         'label' => 'Izdelki',
-        'url' => '#',
+        'url' => '/index.php',
         'class' => 'uppercase font-extrabold',
     ],
 ];

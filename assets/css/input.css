@@ -47,7 +47,53 @@
   }
 }
 
+/* Gradient tint over an image. Put it on the wrapper around the <img>: images can't have
+   pseudo-elements. The wrapper needs the image's rounding + overflow-hidden if it's rounded.
+   Static by default; add img-overlay-hover for a stronger tint on hover. */
+@utility img-overlay {
+  position: relative;
+
+  &::after {
+    content: "";
+    @apply pointer-events-none absolute inset-0 bg-linear-to-b from-image-from to-image-to
+      opacity-25;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+/* Opt-in hover effect for img-overlay (used on product cards, not on the detail page).
+   Triggers on hovering the image or its parent, so put the wrapper directly inside the
+   element that should react (e.g. the card). */
+@utility img-overlay-hover {
+  &::after {
+    @apply transition-opacity duration-400 ease-in;
+  }
+
+  &:hover::after,
+  :hover > &::after {
+    @apply opacity-55;
+  }
+}
+
+/* Ghost button: accent outline and text on a surface-colored fill. */
+@utility btn {
+  @apply inline-flex items-center gap-2 rounded-md border-2 border-accent bg-surface px-4 py-2
+    text-sm font-medium text-accent uppercase;
+}
+
 html,
 body {
   height: 100%;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-ink);
+  font-weight: bold;
+  text-transform: uppercase;
 }

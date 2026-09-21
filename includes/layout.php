@@ -3,7 +3,7 @@
 /** @var string $content */
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,7 @@
 </head>
 <body class="
     grid grid-rows-[auto_1fr_auto]
-    bg-page text-ink bg-[radial-gradient(circle,var(--color-dots)_0.75px,transparent_1.25px)] bg-size-[15px_15px]
+    bg-page text-muted bg-[radial-gradient(circle,var(--color-dots)_0.75px,transparent_1.25px)] bg-size-[15px_15px]
 ">
     <?php include __DIR__ . '/header.php'; ?>
 
