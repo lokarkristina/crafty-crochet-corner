@@ -1,2 +1,21 @@
 RewriteEngine On
+
+# Canonicalize: redirect requests that still end in .php to the extensionless URL
+# (index.php collapses to the site root instead of /index).
+RewriteCond %{THE_REQUEST} \s/+index\.php[\s?] [NC]
+RewriteRule ^ /? [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+(.+)\.php[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
 RewriteRule ^izdelek/([0-9]+)$ products/details.php?id=$1 [L]
+
+# Internally serve extensionless URLs from their matching .php file (e.g. /products/details -> products/details.php).
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-z0-9-]+)$ pages/page.php?slug=$1 [L]

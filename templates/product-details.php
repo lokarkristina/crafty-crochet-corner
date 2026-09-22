@@ -8,7 +8,7 @@
     ?>
     <div class="grid md:grid-cols-3 gap-8">
         <?php // img is repeated also on product card, so extract into partial if it happens again ?>
-        <div class="img-overlay w-full md:max-w-md max-h-50 overflow-hidden rounded-md">
+        <div class="img-overlay w-full md:max-w-md max-h-50 overflow-hidden rounded-md shadow-xl">
             <img
                 src="<?= htmlspecialchars($product['image']) ?>"
                 alt="<?= $productTitle ?>"
@@ -25,8 +25,8 @@
             </div>
             <?php // Back link: not a primary or secondary action, it doesn't hold that much value ?>
             <a
-                href="/index.php"
-                class="btn mt-8"
+                href="/"
+                class="btn mt-8 [--btn-icon-hover:translateX(-0.25rem)]"
             >
                 <i class="fa-solid fa-angle-left" aria-hidden="true"></i>
                 Nazaj na vse izdelke

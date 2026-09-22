@@ -1,7 +1,6 @@
 <?php
 
 // Main navigation items, rendered in order by includes/header.php.
-// Pages that don't exist yet link to '#'.
 //
 // Each item takes:
 //   label - required, link text (escaped on output)
@@ -11,24 +10,24 @@
 return [
     [
         'label' => 'Domov',
-        'url' => '/index.php',
+        'url' => '/',
         'icon' => 'fa-solid fa-house',
     ],
     [
         'label' => 'O nas',
-        'url' => '#',
+        'url' => '/o-nas',
     ],
     [
         'label' => 'Kontakt',
-        'url' => '#',
+        'url' => '/kontakt',
     ],
     [
         'label' => 'Pišite nam',
-        'url' => '#',
+        'url' => '/pisite-nam',
     ],
     [
         'label' => 'Izdelki',
-        'url' => '/index.php',
+        'url' => '/',
         'class' => 'uppercase font-extrabold',
     ],
 ];

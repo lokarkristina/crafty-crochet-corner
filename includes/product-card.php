@@ -5,19 +5,22 @@
 $productTitle = htmlspecialchars($product['title']);
 $productUrl = htmlspecialchars($product['url']);
 ?>
-<article class="flex flex-col overflow-hidden rounded-sm bg-surface shadow-md">
-    <a href="<?= $productUrl ?>" class="img-overlay img-overlay-hover block max-h-50">
+
+<article class="
+    relative flex flex-col overflow-hidden rounded-sm bg-surface shadow-md
+    transition-[translate,box-shadow] duration-(--duration-smooth) ease-smooth hover:-translate-y-px hover:shadow-xl
+    has-focus-visible:ring-2 has-focus-visible:ring-accent
+">
+    <div class="img-overlay img-overlay-hover block max-h-50">
         <?php // img is repeated also on product details, so extract into partial if it happens again ?>
         <img
             src="<?= htmlspecialchars($product['image']) ?>"
             alt="<?= $productTitle ?>"
             class="object-cover"
         >
-    </a>
+    </div>
     <div class="grid h-full grid-rows-[auto_auto_1fr] p-8">
-        <h3 class="text-2xl">
-            <a href="<?= $productUrl ?>" class="inline-block w-full"><?= $productTitle ?></a>
-        </h3>
+        <h3 class="text-2xl"><?= $productTitle ?></h3>
         <p class="text-xl"><?= htmlspecialchars($product['subtitle']) ?></p>
         <div class="mt-5 space-y-2 text-sm">
             <?php foreach (array_slice($product['teaser'], 0, 4) as $paragraph) : ?>
@@ -27,9 +30,12 @@ $productUrl = htmlspecialchars($product['url']);
         <div class="mt-8">
             <a
                 href="<?= $productUrl ?>"
-                class="btn"
+                class="btn after:absolute after:inset-0"
             >
-                <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                <span class="btn-icon-swap" aria-hidden="true">
+                    <i class="fa-solid fa-fw fa-plus"></i>
+                    <i class="fa-solid fa-fw fa-angle-right"></i>
+                </span>
                 Več o <?= $productTitle ?>
             </a>
         </div>

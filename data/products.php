@@ -15,7 +15,7 @@ return [
         'id' => 1,
         // Photo: Chay Tessari / Unsplash
         'image' => 'https://images.unsplash.com/photo-1588016714217-5c5cd4a26d9e?w=800&h=800&fit=crop&q=75',
-        'title' => 'Amigurumi zajček',
+        'title' => 'Mini zajček',
         'subtitle' => 'Mehak ročno izdelan plišast prijatelj',
         'teaser' => [
             'Mehak, ročno kvačkan plišasti zajček z vezenimi detajli na obrazu.',
