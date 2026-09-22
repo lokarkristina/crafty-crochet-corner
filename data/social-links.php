@@ -24,7 +24,7 @@ return [
         'class' => 'hover:text-[#181717]',
     ],
     [
-        'label' => 'E-pošta',
+        'label' => t('contact.email_label'),
         'url' => 'mailto:lokarkristina79@gmail.com',
         'icon' => 'fa-solid fa-at',
         'iconClass' => 'text-[0.9em]',

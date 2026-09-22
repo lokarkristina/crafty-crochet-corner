@@ -10,6 +10,6 @@
             <?php endforeach; ?>
         </div>
     <?php else : ?>
-        <p>Žal te strani nismo našli.</p>
+        <p><?= t('page.not_found_body') ?></p>
     <?php endif; ?>
 </div>

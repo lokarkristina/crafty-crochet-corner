@@ -1,7 +1,9 @@
 <?php
 
+require_once __DIR__ . '/includes/i18n.php';
+
 $products = require __DIR__ . '/data/products.php';
-$title = 'Crafty Crochet Corner';
+$title = t('site.title');
 
 ob_start();
 include __DIR__ . '/templates/home.php';

@@ -29,7 +29,7 @@
                     id="nav-toggle"
                     class="sr-only"
                     aria-controls="mobile-nav"
-                    aria-label="Odpri meni"
+                    aria-label="<?= t('nav.open_menu') ?>"
                 >
                 <i class="fa-solid fa-bars nav-toggle-open [grid-area:1/1]" aria-hidden="true"></i>
                 <i class="fa-solid fa-xmark nav-toggle-close [grid-area:1/1]" aria-hidden="true"></i>

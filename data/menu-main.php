@@ -9,24 +9,24 @@
 //   class - optional, extra CSS classes added to the link
 return [
     [
-        'label' => 'Domov',
+        'label' => t('nav.home'),
         'url' => '/',
         'icon' => 'fa-solid fa-house',
     ],
     [
-        'label' => 'O nas',
+        'label' => t('nav.about'),
         'url' => '/o-nas',
     ],
     [
-        'label' => 'Kontakt',
+        'label' => t('nav.contact'),
         'url' => '/kontakt',
     ],
     [
-        'label' => 'Pišite nam',
+        'label' => t('nav.write_to_us'),
         'url' => '/pisite-nam',
     ],
     [
-        'label' => 'Izdelki',
+        'label' => t('nav.products'),
         'url' => '/',
         'class' => 'uppercase font-extrabold',
     ],

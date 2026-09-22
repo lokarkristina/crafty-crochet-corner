@@ -36,7 +36,7 @@ $productUrl = htmlspecialchars($product['url']);
                     <i class="fa-solid fa-fw fa-plus"></i>
                     <i class="fa-solid fa-fw fa-angle-right"></i>
                 </span>
-                Več o <?= $productTitle ?>
+                <?= t('product.cta', [':title' => $productTitle]) ?>
             </a>
         </div>
     </div>

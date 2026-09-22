@@ -29,10 +29,10 @@
                 class="btn mt-8 [--btn-icon-hover:translateX(-0.25rem)]"
             >
                 <i class="fa-solid fa-angle-left" aria-hidden="true"></i>
-                Nazaj na vse izdelke
+                <?= t('product.back') ?>
             </a>
         </div>
     </div>
 <?php else : ?>
-    <p>Žal tega izdelka nismo našli.</p>
+    <p><?= t('product.not_found_body') ?></p>
 <?php endif; ?>

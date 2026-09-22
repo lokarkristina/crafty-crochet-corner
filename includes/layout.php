@@ -1,9 +1,10 @@
 <?php
+require_once __DIR__ . '/i18n.php';
 /** @var string $title */
 /** @var string $content */
 ?>
 <!DOCTYPE html>
-<html lang="sl">
+<html lang="<?= APP_LOCALE ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

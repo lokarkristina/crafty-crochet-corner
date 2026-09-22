@@ -1,7 +1,7 @@
 <?php $socialLinks = require __DIR__ . '/../data/social-links.php'; ?>
 <footer class="py-6 text-sm text-muted">
     <div class="container flex flex-wrap items-center justify-between gap-4">
-        <p class="text-xs">&copy; <?= date('Y') ?> Crafty Crochet Corner ♡</p>
+        <p class="text-xs">&copy; <?= date('Y') ?> <?= t('site.title') ?> ♡</p>
         <div class="flex gap-1 text-lg">
             <?php foreach ($socialLinks as $link) : ?>
                 <a
