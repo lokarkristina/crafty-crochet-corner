@@ -38,6 +38,7 @@
             <?php // Tablet/mobile menu: overlays the page (see input.css), opened by #nav-toggle. ?>
             <nav
                 id="mobile-nav"
+                aria-label="<?= t('nav.aria_label') ?>"
                 class="
                     mt-4 flex-col divide-y divide-black/14 overflow-hidden rounded-sm
                     bg-linear-to-b from-accent-light to-accent-dark text-accent-contrast
@@ -55,10 +56,13 @@
         </div>
 
         <?php // Desktop menu: one horizontal bar, unchanged from lg up. ?>
-        <nav class="
-            mt-8 hidden rounded-sm bg-linear-to-b from-accent-light to-accent-dark py-3
-            text-accent-contrast shadow-[0_3px_6px_0] shadow-glow lg:block
-        ">
+        <nav
+            aria-label="<?= t('nav.aria_label') ?>"
+            class="
+                mt-8 hidden rounded-sm bg-linear-to-b from-accent-light to-accent-dark py-3
+                text-accent-contrast shadow-[0_3px_6px_0] shadow-glow lg:block
+            "
+        >
             <ul class="flex flex-wrap divide-x divide-black/14 text-shadow-[0_1px_0] text-shadow-black/30">
                 <?php foreach ($menuItems as $item) : ?>
                     <li>

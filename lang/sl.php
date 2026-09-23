@@ -12,6 +12,8 @@ return [
     'nav.write_to_us' => 'Pišite nam',
     'nav.products' => 'Izdelki',
     'nav.open_menu' => 'Odpri meni',
+    'nav.skip_to_content' => 'Skoči na vsebino',
+    'nav.aria_label' => 'Glavna navigacija',
 
     'home.heading' => 'Naši izdelki',
 

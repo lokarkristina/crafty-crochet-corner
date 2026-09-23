@@ -113,11 +113,9 @@
   }
 }
 
-/* Menu-style link: a thin line grows from the center under the label. The line is a background
-   so it needs no positioned parent, and it spans the content box, so the link's side padding
-   stays clear. The icon (if any) follows the link's own hover color by default; set
-   --menu-link-icon-hover on the icon to brighten/dim it to something else instead (e.g. the
-   header's icon, which sits on a colored fill rather than a plain background). */
+/* Menu-style link: a thin underline grows from the center on hover/focus. The icon (if any)
+   follows the link's own hover color by default; override with --menu-link-icon-hover when it
+   sits on a colored background instead (e.g. the header). */
 @utility menu-link {
   background-image: linear-gradient(currentColor, currentColor);
   background-repeat: no-repeat;
@@ -140,10 +138,8 @@
   }
 }
 
-/* Two icons stacked in one spot that swap when the parent (e.g. a .btn) is hovered: the first
-   turns and fades out, the second slides in. Markup:
-   <span class="btn-icon-swap" aria-hidden="true"><i class="..."></i><i class="..."></i></span>
-   Give both icons the same fixed width (fa-fw) so the swap doesn't shift the label. */
+/* Two stacked icons that swap on hover: the first turns and fades out, the second slides in.
+   Use fa-fw on both so the swap doesn't shift the label. */
 @utility btn-icon-swap {
   display: inline-grid;
   place-items: center;
@@ -173,31 +169,17 @@
   }
 }
 
-/* Tablet/mobile menu toggle (includes/header.php): a plain checkbox (#nav-toggle) drives the
-   bars/xmark icon swap and the #mobile-nav panel via :has(), so no JS is needed and the three
-   elements don't need to be adjacent siblings in the markup.
-
-   The close icon's default (closed) state is set here, unlayered, rather than with Tailwind's
-   `hidden` utility: Tailwind wraps its utilities in `@layer utilities`, and per the CSS
-   cascading-layers spec, ANY unlayered rule beats a layered one regardless of specificity or
-   source order. Font Awesome's own CSS sets `.fa-solid, .far, ... { display: inline-block }`
-   unlayered, so a layered `hidden` class can never actually hide an <i> carrying `fa-solid`. */
+/* #nav-toggle (a checkbox in header.php) drives the icon swap and #mobile-nav via :has() — no JS.
+   Set unlayered rather than with Tailwind's `hidden` utility: Font Awesome sets `display`
+   unlayered too, and an unlayered rule always beats a layered one, so `hidden` alone can't hide it. */
 .nav-toggle-close {
   display: none;
 }
 
-/* Panel: `position: absolute` takes it out of the document flow, so opening it overlays the
-   page instead of pushing everything below it down. Its positioned ancestor is the header's own
-   logo/toggle row (see header.php), not the wider `.container`, so it lines up with that row's
-   content width rather than the container's own padding box.
-
-   It stays `display: flex` at all times (harmless since it's out of flow either way) and only
-   `visibility`/`opacity` toggle, the standard way to fade something in and out without the extra
-   moving parts `display: none` would otherwise need (this is a small project - no need for
-   `@starting-style`/`allow-discrete` and the timing math that comes with it). `visibility`
-   switches instantly when opening, so the panel is interactive right away, but only switches to
-   `hidden` once the closing fade has fully finished, via its own zero-length, delayed
-   transition. */
+/* Absolutely positioned so opening the panel overlays the page instead of pushing content down.
+   Anchored to the header's logo/toggle row (see header.php), not the wider `.container`.
+   Fades via opacity/visibility rather than `display: none`, so the transition can play;
+   visibility only switches back to hidden once the closing fade has finished. */
 #mobile-nav {
   display: flex;
   position: absolute;
@@ -272,4 +254,12 @@ h3 {
   color: var(--color-ink);
   font-weight: bold;
   text-transform: uppercase;
+}
+
+/* Every transition in this file reads --duration-smooth, so cutting it to near-zero here turns
+   them all off at once for users who've asked for reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-smooth: 0.01ms;
+  }
 }

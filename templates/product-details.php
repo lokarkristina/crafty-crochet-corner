@@ -23,7 +23,6 @@
                     <p><?= htmlspecialchars($paragraph) ?></p>
                 <?php endforeach; ?>
             </div>
-            <?php // Back link: not a primary or secondary action, it doesn't hold that much value ?>
             <a
                 href="/"
                 class="btn mt-8 [--btn-icon-hover:translateX(-0.25rem)]"

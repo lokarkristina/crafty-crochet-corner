@@ -20,9 +20,19 @@ require_once __DIR__ . '/i18n.php';
     grid grid-rows-[auto_1fr_auto]
     bg-page text-muted bg-[radial-gradient(circle,var(--color-dots)_0.75px,transparent_1.25px)] bg-size-[15px_15px]
 ">
+    <a
+        href="#main-content"
+        class="
+            sr-only focus-visible:not-sr-only focus-visible:fixed focus-visible:top-2
+            focus-visible:left-2 focus-visible:z-50 focus-visible:rounded-sm focus-visible:bg-surface
+            focus-visible:px-4 focus-visible:py-2 focus-visible:text-ink focus-visible:shadow-md
+            focus-visible:ring-2 focus-visible:ring-accent
+        "
+    ><?= t('nav.skip_to_content') ?></a>
+
     <?php include __DIR__ . '/header.php'; ?>
 
-    <main class="pt-4 pb-8">
+    <main id="main-content" tabindex="-1" class="pt-4 pb-8">
         <div class="container">
             <?= $content ?>
         </div>
